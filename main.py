@@ -51,8 +51,10 @@ def main():
         word_count_result = word_count(file_contents)
         chara_count_result = chara_counter(file_contents)
         clean_list_result = chara_sort(chara_count_result)
-        print(word_count_result)
-        print(chara_count_result)
-        print(clean_list_result)
+        print("---Begin Report of Input Text---")
+        print(f"{word_count_result} words were found in the document.")
+        for result in clean_list_result:
+            print(f"The '{result[0]}' character was found {result[1]} times")
+        print("---End of report---")
 
 main()
